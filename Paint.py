@@ -26,7 +26,7 @@ class Paint(Frame):
 
     def setUI(self):
 
-        self.parent.title("Pythonicway PyPaint")
+        self.parent.title(".............")
         self.pack(fill=BOTH, expand=1)
 
         self.columnconfigure(6, weight=1)
@@ -44,21 +44,7 @@ class Paint(Frame):
                          command=lambda: self.set_color("red"))
         red_btn.grid(row=0, column=1)
 
-        green_btn = Button(self, text="Green", width=10,
-                           command=lambda: self.set_color("green"))
-        green_btn.grid(row=0, column=2)
-
-        blue_btn = Button(self, text="Blue", width=10,
-                          command=lambda: self.set_color("blue"))
-        blue_btn.grid(row=0, column=3)
-
-        black_btn = Button(self, text="Black", width=10,
-                           command=lambda: self.set_color("black"))
-        black_btn.grid(row=0, column=4)
-
-        white_btn = Button(self, text="White", width=10,
-                           command=lambda: self.set_color("white"))
-        white_btn.grid(row=0, column=5)
+______________________________
 
         clear_btn = Button(self, text="Clear all", width=10,
                            command=lambda: self.canv.delete("all"))
@@ -73,22 +59,8 @@ class Paint(Frame):
         two_btn = Button(self, text="Five", width=10,
                          command=lambda: self.set_brush_size(5))
         two_btn.grid(row=1, column=2)
+_________________________________
 
-        five_btn = Button(self, text="Seven", width=10,
-                          command=lambda: self.set_brush_size(7))
-        five_btn.grid(row=1, column=3)
-
-        seven_btn = Button(self, text="Ten", width=10,
-                           command=lambda: self.set_brush_size(10))
-        seven_btn.grid(row=1, column=4)
-
-        ten_btn = Button(self, text="Twenty", width=10,
-                         command=lambda: self.set_brush_size(20))
-        ten_btn.grid(row=1, column=5)
-
-        twenty_btn = Button(self, text="Fifty", width=10,
-                            command=lambda: self.set_brush_size(50))
-        twenty_btn.grid(row=1, column=6, sticky=W)
 
 
 def main():
@@ -97,6 +69,3 @@ def main():
     app = Paint(root)
     root.mainloop()
 
-
-if __name__ == '__main__':
-    main()
